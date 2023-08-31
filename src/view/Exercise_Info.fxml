@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.collections.FXCollections?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity"
+	prefHeight="500.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/8"
+	xmlns:fx="http://javafx.com/fxml/1"
+	fx:controller="application.Exercise_InfoController">
+	<children>
+		<VBox prefHeight="185.0" prefWidth="500.0">
+			<children>
+				<HBox prefHeight="37.0" prefWidth="411.0">
+					<children>
+						<Label prefHeight="17.0" prefWidth="493.0"
+							text="Please pick the exercise you have done today and also the amount of time you spent on it" />
+					</children>
+				</HBox>
+				<HBox prefHeight="100.0" prefWidth="200.0">
+					<children>
+						<Label text="Type of exercise" />
+						<ChoiceBox fx:id="exerciseChoiceBox" prefWidth="150.0">
+							<items>
+								<FXCollections fx:factory="observableArrayList">
+									<String fx:value="Running" />
+									<String fx:value="Boxing" />
+									<String fx:value="Leisure bicycling" />
+									<String fx:value="Swimming" />
+									<String fx:value="Vigorous weight lifting" />
+								</FXCollections>
+							</items>
+						</ChoiceBox>
+					</children>
+					<VBox.margin>
+						<Insets top="10.0" />
+					</VBox.margin>
+				</HBox>
+				<HBox layoutX="10.0" layoutY="39.0" prefHeight="100.0"
+					prefWidth="200.0">
+					<children>
+						<Label text="Time Spent Exercising (on average):" />
+						<ChoiceBox fx:id="timeSpentExercising" prefWidth="150.0">
+						<items>
+								<FXCollections fx:factory="observableArrayList">
+									<String fx:value="15" />
+									<String fx:value="30" />
+									<String fx:value="45" />
+									<String fx:value="60" />
+									<String fx:value="75" />
+									<String fx:value="90" />
+									<String fx:value="105" />
+									<String fx:value="120" />
+								</FXCollections>
+							</items>
+						</ChoiceBox>
+					</children>
+				</HBox>
+				<Button mnemonicParsing="false" onAction="#switchToScene7"
+					text="Next">
+					<VBox.margin>
+						<Insets left="230.0" />
+					</VBox.margin>
+				</Button>
+			</children>
+		</VBox>
+		<Label fx:id="sceneSixErrorLabel" layoutX="83.0" layoutY="233.0"
+			prefHeight="17.0" prefWidth="335.0" textFill="#eb0505" />
+	</children>
+</AnchorPane>

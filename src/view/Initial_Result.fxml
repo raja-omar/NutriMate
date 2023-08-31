@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.collections.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.collections.FXCollections?>
+
+<AnchorPane prefHeight="500.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Initial_ResultController">
+	<children>
+		<VBox layoutX="14.0" layoutY="71.0" prefHeight="60.0" prefWidth="258.0">
+			<children>
+				<HBox prefHeight="17.0" prefWidth="200.0">
+					<children>
+						<Label text="BMI (Body Mass Index):">
+							<font>
+								<Font size="14.0" />
+							</font>
+						</Label>
+                  <Label fx:id="bmiLabelNew" textFill="#1c03f5">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font></Label>
+					</children>
+				</HBox>
+				<HBox prefHeight="20.0" prefWidth="232.0">
+					<children>
+						<Label text="BMR (Basal Metabolic Rate):">
+							<font>
+								<Font size="14.0" />
+							</font>
+						</Label>
+                  <Label fx:id="bmrLabelNew" prefHeight="17.0" prefWidth="41.0" textFill="#1107d0">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font></Label>
+					</children>
+				</HBox>
+				<HBox prefHeight="17.0" prefWidth="200.0">
+					<children>
+						<Label text="Obesity class:">
+							<font>
+								<Font size="14.0" />
+							</font>
+						</Label>
+                  <Label fx:id="obesityLabelNew" prefHeight="20.0" prefWidth="163.0" textFill="#2e05d3">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                     <font>
+                        <Font size="14.0" />
+                     </font></Label>
+					</children>
+				</HBox>
+			</children>
+		</VBox>
+		<Label layoutX="14.0" layoutY="14.0" text="Some facts about your health:">
+			<font>
+				<Font size="17.0" />
+			</font>
+		</Label>
+		<VBox layoutX="16.0" layoutY="303.0" prefHeight="26.0" prefWidth="475.0" />
+		<Pane layoutX="14.0" layoutY="169.0" prefHeight="105.0" prefWidth="500.0">
+			<children>
+				<Text layoutY="16.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Your target weight and weekly weight change require you to intake the following amount of calories daily:" wrappingWidth="500.0">
+					<font>
+						<Font size="15.0" />
+					</font>
+				</Text>
+				<Text layoutY="97.0" strokeType="OUTSIDE" strokeWidth="0.0" text="This will allow you to reach your required weight in        day(s). " wrappingWidth="500.0">
+					<font>
+						<Font size="15.0" />
+					</font>
+				</Text>
+            <Label fx:id="targetStuff" layoutX="232.0" layoutY="20.0" textFill="#1d0183">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font></Label>
+            <Label fx:id="requiredDays" layoutX="342.0" layoutY="81.0" text="5" textFill="#2f02ab">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font></Label>
+			</children>
+		</Pane>
+		<Pane layoutX="14.0" layoutY="293.0" prefHeight="105.0" prefWidth="500.0">
+			<children>
+				<Text layoutY="16.0" strokeType="OUTSIDE" strokeWidth="0.0" text="To find out if your current daily caloric intake is close to your recommended daily intake, please pick your preferred type of diet and click Next " wrappingWidth="500.0">
+					<font>
+						<Font size="15.0" />
+					</font>
+				</Text>
+				<ChoiceBox fx:id="dietType" layoutX="172.0" layoutY="72.0" prefWidth="150.0">
+					<items>
+						<FXCollections fx:factory="observableArrayList">
+							<String fx:value="Regular" />
+							<String fx:value="Vegetarian" />
+							<String fx:value="Vegan" />
+						</FXCollections>
+					</items>
+				</ChoiceBox>
+				<Label layoutX="69.0" layoutY="72.0" text="Type of diet:">
+					<font>
+						<Font size="17.0" />
+					</font>
+				</Label>
+			</children>
+		</Pane>
+		<Button layoutX="212.0" layoutY="421.0" mnemonicParsing="false" onAction="#switchToScene5" text="Next" />
+      <Label fx:id="sceneFourErrorLabel" layoutX="224.0" layoutY="398.0" textFill="#e10606" />
+	</children>
+</AnchorPane>

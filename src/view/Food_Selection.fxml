@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="387.0" prefWidth="638.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Food_SelectionController">
+   <children>
+      <VBox prefHeight="293.0" prefWidth="537.0">
+         <children>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label text="Please select a meal from each dropdown menu." />
+               </children>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label text="Breakfast:" />
+                  <ChoiceBox fx:id="breakfastChoicebox" prefWidth="150.0" />
+               </children>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label text="Lunch:" />
+                  <ChoiceBox fx:id="lunchChoicebox" prefWidth="150.0" />
+               </children>
+            </HBox>
+            <HBox prefHeight="151.0" prefWidth="537.0">
+               <children>
+                  <Label text="Dinner:" />
+                  <ChoiceBox fx:id="dinnerChoicebox" prefWidth="150.0" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <Button layoutX="14.0" layoutY="287.0" mnemonicParsing="false" onAction="#switchToScene6" text="Next" />
+      <Label fx:id="sceneFiveErrorLabel" layoutX="291.0" layoutY="321.0" textFill="#ee0909" />
+   </children>
+</AnchorPane>
+
